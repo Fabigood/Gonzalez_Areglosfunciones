@@ -1,6 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
+
+void crearMatrix(int n, int m, int matrix[n][m], int valor) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            matrix[i][j] = valor;
+                        }
+           }
+}
+
+// Función para imprimir una matriz
+void printMatrix(int n, int m, int matrix[n][m]) {
+    printf("\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            printf("%d\t", matrix[i][j]);
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
 
@@ -14,35 +35,19 @@ int main()
     int Matrix[n][m];
 
 
+    for (int i = 0; i < o-1; i++) {
+        printf("\nMatriz %d:\n", i+1);
+        crearMatrix(n, m, Matrix, 0);// Crear e imprimir las primeras matrixs con  0
+        printMatrix(n, m, Matrix);
+        }
 
-  printf("\n");
-    printf("\n Matrix");
-    for (int i = 0; i < o-1; i++)
-    {
-        for (int i = 0; i < n; i++)
-        { // numero de matrices que se van a imprimir y le n de columnas y filas se aplica el -1 para que no se imprima una extra y tener 1 menos de la funal
-            printf("\n");
-            for (int j = 0; j < m; j++)
-            {
-                Matrix[i][j] = 0;
-                printf("%d\t", Matrix[i][j]);
-            }
-        }
-        printf("\n Matrix:");
-        printf("\n");
-    }
-    for (int i = 0; i < n; i++)
-    {//for creado para que la mtrix impirma solo 1
-        printf("\n");
-        for (int j = 0; j < m; j++)
-        {
-            Matrix[i][j] = 1;
-            printf("%d\t", Matrix[i][j]);
 
-        }
-            
-        }
-        return 0;
-    }
-    
+ // Crear e imprimir la última matriz con valor 1
+    printf("\nMatriz %d:\n", o);
+    crearMatrix(n, m, Matrix, 1);
+    printMatrix(n, m, Matrix);
+    return 0;
+}
+
+
 
