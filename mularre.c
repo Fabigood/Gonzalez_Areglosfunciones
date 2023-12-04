@@ -4,13 +4,14 @@
 
 
 void crearMatrix(int n, int m, int matrix[n][m], int valor) {
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) { //funcion para crear la marix con 1 se utiliza valor por que ese ser alo que se asigna
         for (int j = 0; j < m; j++) {
             matrix[i][j] = valor;
                         }
            }
 }
 
+// Función para imprimir una matriz
 void printMatrix(int n, int m, int matrix[n][m]) {
     printf("\n");
     for (int i = 0; i < n; i++) {
