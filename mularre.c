@@ -44,7 +44,7 @@ int main()
 
  // Crear e imprimir la última matriz con valor 1
     printf("\nMatriz %d:\n", o);
-    crearMatrix(n, m, Matrix, 1);
+    crearMatrix(n, m, Matrix, 1); //en esta parte se agrego el valor especifico que en este caso fue 1
     printMatrix(n, m, Matrix);
     return 0;
 }
