@@ -11,7 +11,6 @@ void crearMatrix(int n, int m, int matrix[n][m], int valor) {
            }
 }
 
-// Función para imprimir una matriz
 void printMatrix(int n, int m, int matrix[n][m]) {
     printf("\n");
     for (int i = 0; i < n; i++) {
